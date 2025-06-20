@@ -1,11 +1,9 @@
 ﻿
 using Sync.Models;
-using System.ComponentModel.DataAnnotations;
-using Unisync.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Unisync.Models
+namespace Sync.Models
 {
     public class Reminder
     {

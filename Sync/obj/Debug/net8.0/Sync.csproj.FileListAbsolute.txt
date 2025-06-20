@@ -27,3 +27,4 @@ C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\refint\Sync.dll
 C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\Sync.pdb
 C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\Sync.genruntimeconfig.cache
 C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\ref\Sync.dll
+C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\Sync.sourcelink.json
