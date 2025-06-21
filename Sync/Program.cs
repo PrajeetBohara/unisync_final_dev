@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Sync.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+// Register the SyncContext with the dependency injection container, using our connection string
+builder.Services.AddDbContext<Sync.Data.SyncContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
 var app = builder.Build();
 
