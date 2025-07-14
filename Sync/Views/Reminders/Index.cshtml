@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Sync.Models.Reminder>
+@{
+    ViewData["Title"] = "Reminders";
+    var categories = ViewBag.Categories as List<Sync.Models.Category>;
+    int? selectedCat = ViewBag.SelectedCategory as int?;
+}
+<h1>Reminders</h1>
+<div class="mb-3">
+    <!-- Category Filter Dropdown -->
+    <form id="filterForm" class="form-inline">
+        <label for="categoryFilter" class="form-label"><strong>Filter by Category:</strong></label>
+        <select id="categoryFilter" class="form-select mx-2" style="width:auto;">
+            <option value="0">All</option>
+            @if (categories != null)
+            {
+                foreach(var cat in categories)
+                {
+
+                    <option value="@cat.Id" selected="@(selectedCat.HasValue && selectedCat.Value == cat.Id ? "selected" : null)">@cat.Name</option>
+                }
+            }
+        </select>
+    </form>
+</div>
+
+<div class="mb-3">
+    <!-- Link to the Create page (if not using AJAX form inline) -->
+    <a asp-action="Create" class="btn btn-primary">Add New Reminder</a>
+</div>
+<!-- Reminders Table -->
+<div id="reminders-table">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var reminder in Model)
+            {
+                <tr>
+                    <td>@reminder.Title</td>
+                    <td>@reminder.Description</td>
+                    <td>@reminder.DueDate.ToString("g")</td> @* "g" format =
+general date/time *@
+                    <td>@reminder.Category?.Name</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@reminder.Id" class="btn
+    btn-sm btn-secondary">Edit</a>
+                        <button class="btn btn-sm btn-danger delete-btn" dataid="@reminder.Id">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (!Model.Any())
+    {
+        <p class="text-muted">No reminders found.</p>
+    }
+</div>
+
+
