@@ -1,0 +1,35 @@
+﻿@model Unisync.Models.Reminder
+@{
+    ViewData["Title"] = "Create Reminder";
+    var categories = ViewBag.Categories as List<Unisync.Models.Category>;
+}
+<h1>Create a New Reminder</h1>
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+<textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DueDate" class="form-label">Due Date</label>
+        <input asp-for="DueDate" class="form-control" type="datetime-local" />
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select asp-for="CategoryId" class="form-select"
+                asp-items="@(new SelectList(categories, "Id", "Name"))">
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+@section Scripts {
+    <!-- Validation script (if not already included via layout) -->
+    <partial name="_ValidationScriptsPartial" />
+}
