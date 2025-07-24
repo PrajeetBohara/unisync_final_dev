@@ -1,7 +1,7 @@
-﻿@model Unisync.Models.Reminder
+﻿@model Sync.Models.Reminder
 @{
     ViewData["Title"] = "Create Reminder";
-    var categories = ViewBag.Categories as List<Unisync.Models.Category>;
+    var categories = ViewBag.Categories as List<Sync.Models.Category>;
 }
 <h1>Create a New Reminder</h1>
 <form asp-action="Create" method="post">
