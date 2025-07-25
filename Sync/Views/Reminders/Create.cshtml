@@ -33,3 +33,24 @@
     <!-- Validation script (if not already included via layout) -->
     <partial name="_ValidationScriptsPartial" />
 }
+
+
+
+
+@*         // POST: /Reminders/Create
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult>
+    Create(Reminder reminder)
+    {
+    if (ModelState.IsValid)
+    {
+    _context.Add(reminder);
+    await _context.SaveChangesAsync();
+    // On normal form submission, redirect back to list
+    return RedirectToAction(nameof(Index));
+    }
+    // If validation failed, re-show form with current data and categories
+    ViewBag.Categories = _context.Categories.ToList();
+    return View(reminder);
+    } *@
