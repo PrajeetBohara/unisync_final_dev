@@ -166,3 +166,7 @@ C:\Users\praje\source\repos\Sync\Sync\bin\Debug\net8.0\runtimes\browser\lib\net8
 C:\Users\praje\source\repos\Sync\Sync\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\Sync.csproj.AssemblyReference.cache
 C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\Sync.csproj.Up2Date
+C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\praje\source\repos\Sync\Sync\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

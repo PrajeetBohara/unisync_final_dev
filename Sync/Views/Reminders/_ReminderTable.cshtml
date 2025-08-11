@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Sync.Models.Reminder>
+<table class="table table-striped">
+    <thead>
+        <!-- (table header as before) -->
+    </thead>
+    <tbody>
+        @foreach (var reminder in Model)
+        {
+            <tr>
+                <td>@reminder.Title</td>
+                <td>@reminder.Description</td>
+                <td>@reminder.DueDate.ToString("g")</td>
+                <td>@reminder.Category?.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@reminder.Id"
+                       class="btn btn-sm btn-secondary">Edit</a>
+                    <button class="btn btn-sm btn-danger delete-btn" dataid="@reminder.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (!Model.Any())
+{
+    <p class="text-muted">No reminders found.</p>
+}
