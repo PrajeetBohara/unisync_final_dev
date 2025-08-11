@@ -40,8 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVtaW5kZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/praje/source/repos/Sync/Sync/Views/Reminders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVtaW5kZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/praje/source/repos/Sync/Sync/Views/Reminders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVtaW5kZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/praje/source/repos/Sync/Sync/Views/Reminders/_ReminderTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVtaW5kZXJzXF9SZW1pbmRlclRhYmxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/praje/source/repos/Sync/Sync/Views/Shared/Error.cshtml]
